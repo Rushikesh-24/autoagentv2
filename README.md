@@ -66,7 +66,7 @@ Project
 - **Form Handling** React Hook Form
 - **Languages** TypeScript, JavaScript, Python
 - **Icons** Lucide Icons
-- **AI Model Integration:** Gemini, Groq
+- **Third-party AI Model Integration:** Gemini
 - **Authentication:** Clerk
 - **Hosting & Deployment:** Vercel
 
