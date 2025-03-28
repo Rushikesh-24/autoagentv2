@@ -158,11 +158,11 @@ export default function AgentsPage() {
                     </div>
                     <div>
                       <div className="text-muted-foreground">Pricing</div>
-                      <div className="font-medium">{agent.monetizationData.isMarketplaceListed}</div>
+                      <div className="font-medium">{agent.monetizationData.isMarketplaceListed?'50$':'free'}</div>
                     </div>
                     <div>
                       <div className="text-muted-foreground">Type</div>
-                      <div className="font-medium capitalize">{agent.monetizationData.isMarketplaceListed}</div>
+                      <div className="font-medium capitalize">{!agent.monetizationData.isMarketplaceListed?"User model":"Paid model"}</div>
                     </div>
                   </div>
                 </CardContent>

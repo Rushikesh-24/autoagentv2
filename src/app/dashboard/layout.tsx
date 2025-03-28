@@ -74,14 +74,6 @@ export default function DashboardLayout({
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
-                <SidebarMenuButton asChild isActive={pathname === "/dashboard/analytics"} tooltip="Analytics">
-                  <Link href="/dashboard/analytics">
-                    <BarChart3 className="h-4 w-4" />
-                    <span>Analytics</span>
-                  </Link>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-              <SidebarMenuItem>
                 <SidebarMenuButton asChild isActive={pathname === "/dashboard/earnings"} tooltip="Earnings">
                   <Link href="/dashboard/earnings">
                     <CreditCard className="h-4 w-4" />
