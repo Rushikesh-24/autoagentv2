@@ -4,7 +4,7 @@ import type React from "react"
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { BarChart3, Bot, CreditCard, LayoutDashboard, LogOut, Package, Settings, User, Plus } from "lucide-react"
+import { BarChart3, Bot, CreditCard, LayoutDashboard, LogOut, Package, Settings, User, Plus, Wrench } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import {
@@ -41,7 +41,7 @@ export default function DashboardLayout({
     <SidebarProvider>
       <div className="flex min-h-screen w-full">
         <Sidebar>
-          <SidebarHeader className="border-b">
+          <SidebarHeader className="border-none">
             <div className="flex items-center gap-2 px-2 py-3">
               <Bot className="h-6 w-6 text-primary" />
               <span className="font-bold text-xl">AutoAgent</span>
@@ -62,6 +62,14 @@ export default function DashboardLayout({
                   <Link href="/dashboard/agents">
                     <Bot className="h-4 w-4" />
                     <span>My Agents</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild isActive={pathname === "/builder/custom"} tooltip="Earnings">
+                  <Link href="/builder/custom">
+                    <Wrench className="h-4 w-4 mt-0.5" />
+                    <span>Build your own model</span>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>

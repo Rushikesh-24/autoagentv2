@@ -39,6 +39,7 @@ import {
   ScissorsIcon,
   TextIcon,
   BrainCog,
+  XIcon,
 } from "lucide-react";
 import {
   Accordion,
@@ -569,7 +570,10 @@ export default function AgentBuilder(props?: { initialData?: { nodes: any[]; edg
                                     {
                                         output &&
                                         <div className="absolute bg-white border w-1/3 top-24 right-20 rounded-xl p-10 z-20">
-                                            <p className=" text-xl font-semibold mb-2">Output</p>
+                                            <div className=" text-xl font-semibold mb-2 flex items-center justify-between">
+                                                <p>Output</p>
+                                                <button className="cursor-pointer" onClick={()=>setOutput("")}><XIcon /></button>
+                                            </div>
                                             <p>{output}</p>
                                         </div>
                                     }

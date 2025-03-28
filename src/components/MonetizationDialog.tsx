@@ -19,6 +19,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { useAuth } from "@clerk/nextjs";
+import { useRouter } from "next/navigation";
 
 interface MonetizationDialogProps {
   isOpen: boolean;
@@ -40,6 +41,7 @@ export function MonetizationDialog({
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const { isLoaded, isSignedIn, userId } = useAuth();
+  const { push } = useRouter()
   if (!isLoaded) {
     return <div>Loading...</div>;
   }
@@ -63,7 +65,9 @@ export function MonetizationDialog({
     onCreateAgent(agentMonetizationData);
 
     // Close the dialog
+    push("/dashboard/agents")
     onOpenChange(false);
+    
   };
 
   return (
